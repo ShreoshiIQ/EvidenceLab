@@ -4,6 +4,9 @@ import json, os, sys
 from pathlib import Path
 ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(ROOT))
+for _n in ("tigergraph-mcp", "tigergraph-mcp.exe"):   # on a cloud host the venv's bin folder may not be on PATH: use the full path when it exists
+    _c = Path(sys.executable).parent / _n
+    if _c.exists(): os.environ.setdefault("MCP_COMMAND", str(_c)); break
 import pandas as pd, streamlit as st
 from evaluation.metrics import load_runs, scorecard
 
