@@ -6,3 +6,8 @@ runs_gemini/
 cache/
 *.sqlite
 *.db
+
+analysis.txt
+fails.txt
+failures.txt
+lookups.txt
