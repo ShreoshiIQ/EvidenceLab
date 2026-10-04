@@ -35,6 +35,12 @@ def _tg():
     from tgdb import get_tg
     tg = get_tg(); tg.ensure_up(); return tg
 
+def show_path(path, methods=None):
+    """Plain-text rendering (markdown can swallow brackets/underscores in step names)."""
+    steps = [str(x) for x in (path or []) if str(x).strip()]
+    if not steps and methods: steps = ["Fixed pipeline, retrieved with: " + ", ".join(methods)]
+    for i, x in enumerate(steps): st.text(f"{i+1}. {x}")
+
 def fmt(x, nd=1): return "-" if x is None or (isinstance(x, float) and pd.isna(x)) else (f"{x:,.{nd}f}" if isinstance(x, float) else f"{x:,}")
 
 # ------------------------------------------------------------------ sidebar
@@ -96,7 +102,7 @@ with t_ask:
         st.markdown("#### How each pipeline got there")
         for p, r in res.items():
             with st.expander(f"{NAMES[p]}: investigation path and evidence", expanded=p == "agentic"):
-                for i, s in enumerate(r.get("investigation_path") or []): st.markdown(f"{i+1}. {s}")
+                show_path(r.get("investigation_path"), r.get("retrieval_methods"))
                 st.write("**Citations:**", r.get("citations"), "| valid:", r.get("citation_valid_rate"), "| supported by evidence:", r.get("answer_supported_by_citations"))
                 if r.get("reasoning"): st.write("**Reasoning:**", r["reasoning"])
                 with st.expander("Evidence ledger"): st.json(r.get("evidence") or [])
@@ -189,7 +195,7 @@ with t_drill:
                     st.write("Citations:", r["citations"], "| valid:", r.get("citation_valid_rate"), "| supported:", r.get("answer_supported_by_citations"),
                              "| doc_recall:", r.get("doc_recall"), "| stop:", r.get("stop_reason"))
                     st.markdown("**Investigation path**")
-                    for i, s in enumerate(r.get("investigation_path") or []): st.markdown(f"{i+1}. {s}")
+                    show_path(r.get("investigation_path"), r.get("retrieval_methods"))
                     with st.expander("Raw trace"): st.json(r["trace"])
                     if isinstance(r.get("evidence"), list):
                         with st.expander("Evidence ledger"): st.json(r["evidence"])
