@@ -1,0 +1,55 @@
+USE GRAPH {{GRAPH}}
+
+CREATE OR REPLACE QUERY get_chunks(SET<STRING> ids) FOR GRAPH {{GRAPH}} SYNTAX V2 {
+  C = SELECT c FROM Chunk:c WHERE c.id IN ids;
+  PRINT C[C.id AS id, C.text AS text, C.doc_id AS doc_id, C.title AS title];
+}
+
+CREATE OR REPLACE QUERY entity_by_ids(SET<STRING> ids) FOR GRAPH {{GRAPH}} SYNTAX V2 {
+  E = SELECT x FROM Entity:x WHERE x.id IN ids;
+  PRINT E[E.id AS id, E.name AS name, E.etype AS etype];
+}
+
+CREATE OR REPLACE QUERY entities_by_type(STRING t) FOR GRAPH {{GRAPH}} SYNTAX V2 {
+  E = SELECT x FROM Entity:x WHERE x.etype == t;
+  PRINT E[E.id AS id, E.name AS name, E.etype AS etype];
+}
+
+CREATE OR REPLACE QUERY entity_events(STRING eid) FOR GRAPH {{GRAPH}} SYNTAX V2 {
+  S = SELECT x FROM Entity:x WHERE x.id == eid;
+  E = SELECT e FROM S:s -(INVOLVES_REV>)- Event:e;
+  PRINT E[E.id AS id, E.title AS title, E.competitors AS competitors, E.nations AS nations, E.date AS date, E.venue AS venue, E.gold AS gold, E.silver AS silver, E.bronze AS bronze];
+}
+
+CREATE OR REPLACE QUERY event_chunks(SET<STRING> eids) FOR GRAPH {{GRAPH}} SYNTAX V2 {
+  E = SELECT e FROM Event:e WHERE e.id IN eids;
+  C = SELECT c FROM E:e -(HAS_CHUNK>)- Chunk:c;
+  PRINT C[C.id AS id, C.text AS text, C.doc_id AS doc_id, C.title AS title];
+}
+
+// 1-hop graph expansion that skips hub entities (Games/Sport) so it doesn't explode
+CREATE OR REPLACE QUERY expand_chunks(SET<STRING> ids, INT lim) FOR GRAPH {{GRAPH}} SYNTAX V2 {
+  Seed = SELECT c FROM Chunk:c WHERE c.id IN ids;
+  Ents = SELECT e FROM Seed:c -(MENTIONS>)- Entity:e WHERE e.etype != "Games" AND e.etype != "Sport";
+  Rel  = SELECT c2 FROM Ents:e -(MENTIONS_REV>)- Chunk:c2 WHERE NOT (c2.id IN ids) LIMIT lim;
+  PRINT Rel[Rel.id AS id, Rel.text AS text, Rel.doc_id AS doc_id, Rel.title AS title];
+  PRINT Ents[Ents.id AS id, Ents.name AS name, Ents.etype AS etype];
+}
+
+// Vector search runs through TigerGraph's vector index. The MCP tool tigergraph__search_top_k_similarity
+// is the primary path; these installed queries are the REST-backend equivalent / fallback.
+CREATE OR REPLACE QUERY vec_chunks(LIST<FLOAT> qvec, INT k) FOR GRAPH {{GRAPH}} SYNTAX V2 {
+  MapAccum<VERTEX, FLOAT> @@dist;
+  Top = vectorSearch({Chunk.emb}, qvec, k, {distance_map: @@dist});
+  PRINT Top[Top.id AS id, Top.text AS text, Top.doc_id AS doc_id, Top.title AS title];
+  PRINT @@dist AS dist;
+}
+
+CREATE OR REPLACE QUERY vec_entities(LIST<FLOAT> qvec, INT k) FOR GRAPH {{GRAPH}} SYNTAX V2 {
+  MapAccum<VERTEX, FLOAT> @@dist;
+  Top = vectorSearch({Entity.emb}, qvec, k, {distance_map: @@dist});
+  PRINT Top[Top.id AS id, Top.name AS name, Top.etype AS etype];
+  PRINT @@dist AS dist;
+}
+
+INSTALL QUERY ALL

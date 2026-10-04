@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "tigergraph": {
+      "command": "uvx",
+      "args": ["tigergraph-mcp"],
+      "env": {
+        "TG_HOST": "YOUR_WORKSPACE_URL",
+        "TG_GRAPHNAME": "OlympicsKG",
+        "TG_SECRET": "YOUR_DATABASE_SECRET"
+      }
+    }
+  }
+}

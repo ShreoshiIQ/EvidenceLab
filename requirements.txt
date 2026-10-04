@@ -1,0 +1,11 @@
+requests
+python-dotenv
+pyTigerGraph
+pyTigerGraph-mcp
+mcp>=1.0,<2
+sentence-transformers
+fastapi
+uvicorn
+streamlit
+pandas
+tzdata

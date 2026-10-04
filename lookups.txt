@@ -1,0 +1,4 @@
+pub-009 | How many nations competed in Sailing at the 2016 Summer Olympics – Women's RS:X? | ['26']
+pub-025 | How many nations competed in Judo at the 2016 Summer Olympics – Women's 57 kg? | ['23']
+pub-029 | How many nations competed in Shooting at the 2012 Summer Olympics – Men's 50 metre rifle three positions? | ['28']
+pub-032 | How many nations competed in Gymnastics at the 2016 Summer Olympics – Men's horizontal bar? | ['34']

@@ -1,0 +1,269 @@
+{
+  "n_questions": 100,
+  "pipelines": {
+    "rag": {
+      "n": 100,
+      "errors": 0,
+      "models": [
+        "gemini-3.1-flash-lite"
+      ],
+      "tokens_per_question": {
+        "context": 2111.6,
+        "input": 3326.2,
+        "output": 76.5,
+        "total": 3402.7
+      },
+      "median_total_tokens": 3281.0,
+      "latency_s": {
+        "avg": 8.74,
+        "median": 8.51,
+        "p95": 11.85
+      },
+      "avg_retrieval_steps": 1.0,
+      "avg_reasoning_steps": 1.0,
+      "avg_llm_calls": 1.0,
+      "retrieval_methods_share": {
+        "vector_search": 1.0
+      },
+      "avg_chunks": 10.0,
+      "avg_citations": 2.31,
+      "citation_valid_rate": 0.99,
+      "answer_supported_rate": 1.0,
+      "accuracy": 0.53,
+      "completeness": 0.583,
+      "semantic_sim": 0.817,
+      "accuracy_per_1k_tokens": 0.156,
+      "n_pass": 53,
+      "avg_guess_baseline": 0.0,
+      "lift_over_guess": 0.53,
+      "avg_doc_recall": 0.664
+    },
+    "graphrag": {
+      "n": 100,
+      "errors": 0,
+      "models": [
+        "gemini-3.1-flash-lite"
+      ],
+      "tokens_per_question": {
+        "context": 3242.5,
+        "input": 4848.4,
+        "output": 82.1,
+        "total": 4930.5
+      },
+      "median_total_tokens": 5000.5,
+      "latency_s": {
+        "avg": 10.86,
+        "median": 10.52,
+        "p95": 15.06
+      },
+      "avg_retrieval_steps": 4.0,
+      "avg_reasoning_steps": 1.0,
+      "avg_llm_calls": 1.0,
+      "retrieval_methods_share": {
+        "graph_traversal:entity_events": 1.0,
+        "graph_traversal:expand_chunks": 1.0,
+        "vector_search": 1.0,
+        "entity_linking": 1.0
+      },
+      "avg_chunks": 10.0,
+      "avg_citations": 1.7,
+      "citation_valid_rate": 0.99,
+      "answer_supported_rate": 0.989,
+      "accuracy": 0.62,
+      "completeness": 0.703,
+      "semantic_sim": 0.869,
+      "accuracy_per_1k_tokens": 0.126,
+      "n_pass": 62,
+      "avg_guess_baseline": 0.0,
+      "lift_over_guess": 0.62,
+      "avg_doc_recall": 0.874
+    },
+    "agentic": {
+      "n": 100,
+      "errors": 0,
+      "models": [
+        "gemini-3.1-flash-lite"
+      ],
+      "tokens_per_question": {
+        "context": 614.1,
+        "input": 2726.6,
+        "output": 405.3,
+        "total": 3131.9
+      },
+      "median_total_tokens": 2920.5,
+      "latency_s": {
+        "avg": 12.1,
+        "median": 11.07,
+        "p95": 22.66
+      },
+      "avg_retrieval_steps": 2.33,
+      "avg_reasoning_steps": 2.83,
+      "avg_llm_calls": 2.3,
+      "retrieval_methods_share": {
+        "graph_traversal:entity_events": 1.0,
+        "entity_linking": 0.82,
+        "graph_traversal:adjacent_games": 0.22,
+        "graph_traversal:graph_traversal": 0.02
+      },
+      "avg_chunks": 0.0,
+      "avg_citations": 1.32,
+      "citation_valid_rate": 1.0,
+      "answer_supported_rate": 1.0,
+      "accuracy": 0.98,
+      "completeness": 1.0,
+      "semantic_sim": 0.997,
+      "accuracy_per_1k_tokens": 0.313,
+      "n_pass": 98,
+      "avg_guess_baseline": 0.0,
+      "lift_over_guess": 0.98,
+      "avg_doc_recall": 0.89
+    }
+  },
+  "models": [
+    "gemini-3.1-flash-lite"
+  ],
+  "same_model_across_pipelines": true,
+  "by_qtype": {
+    "aggregation": {
+      "agentic": {
+        "n": 21,
+        "accuracy": 1.0,
+        "completeness": 1.0,
+        "avg_tokens": 3765.8,
+        "avg_latency_s": 14.83
+      },
+      "graphrag": {
+        "n": 21,
+        "accuracy": 0.19,
+        "completeness": 0.19,
+        "avg_tokens": 4665.1,
+        "avg_latency_s": 10.82
+      },
+      "rag": {
+        "n": 21,
+        "accuracy": 0.0,
+        "completeness": 0.0,
+        "avg_tokens": 3335.9,
+        "avg_latency_s": 8.79
+      }
+    },
+    "lookup": {
+      "agentic": {
+        "n": 19,
+        "accuracy": 1.0,
+        "completeness": 1.0,
+        "avg_tokens": 4196.2,
+        "avg_latency_s": 13.95
+      },
+      "graphrag": {
+        "n": 19,
+        "accuracy": 1.0,
+        "completeness": 1.0,
+        "avg_tokens": 5001.2,
+        "avg_latency_s": 10.57
+      },
+      "rag": {
+        "n": 19,
+        "accuracy": 1.0,
+        "completeness": 1.0,
+        "avg_tokens": 3403.2,
+        "avg_latency_s": 8.46
+      }
+    },
+    "multi_hop": {
+      "agentic": {
+        "n": 28,
+        "accuracy": 0.929,
+        "completeness": 1.0,
+        "avg_tokens": 2620.4,
+        "avg_latency_s": 11.06
+      },
+      "graphrag": {
+        "n": 28,
+        "accuracy": 0.571,
+        "completeness": 0.714,
+        "avg_tokens": 5040.8,
+        "avg_latency_s": 11.04
+      },
+      "rag": {
+        "n": 28,
+        "accuracy": 0.393,
+        "completeness": 0.464,
+        "avg_tokens": 3374.8,
+        "avg_latency_s": 8.79
+      }
+    },
+    "superlative": {
+      "agentic": {
+        "n": 10,
+        "accuracy": 1.0,
+        "completeness": 1.0,
+        "avg_tokens": 3977.8,
+        "avg_latency_s": 11.97
+      },
+      "graphrag": {
+        "n": 10,
+        "accuracy": 0.4,
+        "completeness": 0.829,
+        "avg_tokens": 5059.1,
+        "avg_latency_s": 10.68
+      },
+      "rag": {
+        "n": 10,
+        "accuracy": 0.4,
+        "completeness": 0.729,
+        "avg_tokens": 3345.9,
+        "avg_latency_s": 8.35
+      }
+    },
+    "temporal": {
+      "agentic": {
+        "n": 22,
+        "accuracy": 1.0,
+        "completeness": 1.0,
+        "avg_tokens": 1874.0,
+        "avg_latency_s": 9.27
+      },
+      "graphrag": {
+        "n": 22,
+        "accuracy": 0.864,
+        "completeness": 0.864,
+        "avg_tokens": 4923.8,
+        "avg_latency_s": 11.01
+      },
+      "rag": {
+        "n": 22,
+        "accuracy": 0.864,
+        "completeness": 0.864,
+        "avg_tokens": 3527.3,
+        "avg_latency_s": 9.07
+      }
+    }
+  },
+  "agentic": {
+    "avg_tokens_per_question": 3131.9,
+    "avg_time_per_question_s": 12.1,
+    "avg_retrieval_steps": 2.33,
+    "avg_reasoning_steps": 2.83,
+    "avg_total_steps": 5.16,
+    "avg_rounds": 1.3,
+    "strategy_change_rate": 0.0,
+    "stop_reasons": {
+      "rule_sufficient": 99,
+      "orchestrator_answer": 1
+    },
+    "tools": {
+      "count": 37,
+      "entity_events": 100,
+      "entity_linking": 82,
+      "adjacent_games": 22,
+      "max": 10,
+      "graph_traversal": 2
+    },
+    "agents": {
+      "aggregation": 47,
+      "entity_linking": 82,
+      "graph_traversal": 100
+    }
+  }
+}

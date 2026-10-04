@@ -1,0 +1,301 @@
+qid,qtype,pipeline,answer,verdict,total_tokens,context_tokens,input_tokens,output_tokens,llm_calls,latency,retrieval_steps,reasoning_steps,n_chunks,n_citations,stop_reason,strategy_changes,doc_recall
+pub-001,aggregation,agentic,5,PASS,5460,1271,4846,614,3,29.373,3,5,0,1,rule_sufficient,0.0,1.0
+pub-001,aggregation,graphrag,4,FAIL,4480,2776,4400,80,1,11.074,4,1,10,1,fixed_pipeline,,1.0
+pub-001,aggregation,rag,1,FAIL,6253,2255,6120,133,1,10.111,1,1,10,1,fixed_pipeline,,0.273
+pub-002,temporal,agentic,Chen Ding,PASS,1793,115,1499,294,2,10.258,2,2,0,2,rule_sufficient,0.0,0.5
+pub-002,temporal,graphrag,Chen Ding,PASS,5273,3302,5214,59,1,12.172,4,1,10,1,fixed_pipeline,,1.0
+pub-002,temporal,rag,Chen Ding,PASS,3451,1969,3392,59,1,9.609,1,1,10,1,fixed_pipeline,,1.0
+pub-003,aggregation,agentic,8,PASS,3789,1498,3416,373,2,66.415,2,3,0,1,rule_sufficient,0.0,1.0
+pub-003,aggregation,graphrag,6,FAIL,4680,3174,4498,182,1,14.862,4,1,10,1,fixed_pipeline,,1.0
+pub-003,aggregation,rag,3,FAIL,2825,1975,2749,76,1,4.08,1,1,10,3,fixed_pipeline,,0.471
+pub-004,superlative,agentic,Athletics at the 2008 Summer Olympics – Men's marathon,PASS,5817,1742,5233,584,3,7.789,3,5,0,1,rule_sufficient,0.0,1.0
+pub-004,superlative,graphrag,Athletics at the 2008 Summer Olympics – Men's 100 metres,FAIL,5818,3966,5746,72,1,13.292,4,1,10,1,fixed_pipeline,,0.953
+pub-004,superlative,rag,Athletics at the 2008 Summer Olympics – Women's marathon,FAIL,3283,2231,3177,106,1,6.582,1,1,10,1,fixed_pipeline,,0.186
+pub-005,multi_hop,agentic,Naim Süleymanoğlu,PASS,2065,337,1733,332,2,5.931,2,2,0,1,rule_sufficient,0.0,1.0
+pub-005,multi_hop,graphrag,Naim Süleymanoğlu,PASS,5676,3709,5608,68,1,10.43,4,1,10,1,fixed_pipeline,,1.0
+pub-005,multi_hop,rag,Naim Süleymanoğlu,PASS,4048,2052,3975,73,1,8.092,1,1,10,1,fixed_pipeline,,1.0
+pub-006,temporal,agentic,Rafaela Silva,PASS,2173,290,1764,409,2,7.266,3,2,0,2,rule_sufficient,0.0,0.5
+pub-006,temporal,graphrag,Rafaela Silva,PASS,4683,3076,4606,77,1,11.635,4,1,10,1,fixed_pipeline,,1.0
+pub-006,temporal,rag,Rafaela Silva,PASS,3154,1875,3090,64,1,21.133,1,1,10,1,fixed_pipeline,,1.0
+pub-007,temporal,agentic,Renaud Lavillenie,PASS,1799,119,1498,301,2,4.798,2,2,0,2,rule_sufficient,0.0,0.5
+pub-007,temporal,graphrag,Renaud Lavillenie,PASS,5505,3974,5416,89,1,8.587,4,1,10,3,fixed_pipeline,,0.5
+pub-007,temporal,rag,Renaud Lavillenie,PASS,2941,2364,2848,93,1,6.503,1,1,10,2,fixed_pipeline,,1.0
+pub-008,superlative,agentic,Sailing at the 2000 Summer Olympics – Soling,PASS,2840,840,2460,380,2,12.376,2,3,0,1,rule_sufficient,0.0,1.0
+pub-008,superlative,graphrag,Sailing at the 2000 Summer Olympics – Soling,PASS,4412,2477,4339,73,1,11.975,4,1,10,2,fixed_pipeline,,1.0
+pub-008,superlative,rag,Sailing at the 2000 Summer Olympics – Soling,PASS,3322,1690,3241,81,1,6.311,1,1,10,1,fixed_pipeline,,0.625
+pub-009,lookup,agentic,26,PASS,4594,508,4092,502,3,12.175,3,4,0,1,rule_sufficient,0.0,1.0
+pub-009,lookup,graphrag,26,PASS,3765,2290,3709,56,1,12.68,4,1,10,2,fixed_pipeline,,1.0
+pub-009,lookup,rag,26,PASS,2767,1425,2715,52,1,9.276,1,1,10,1,fixed_pipeline,,1.0
+pub-010,aggregation,agentic,4,PASS,4982,1029,4575,407,3,12.39,2,4,0,1,orchestrator_answer,0.0,1.0
+pub-010,aggregation,graphrag,3,FAIL,4110,2937,4033,77,1,6.835,4,1,10,1,fixed_pipeline,,1.0
+pub-010,aggregation,rag,2,FAIL,3343,2472,3226,117,1,11.103,1,1,10,2,fixed_pipeline,,0.3
+pub-011,multi_hop,agentic,Martina Sáblíková,PASS,2070,323,1746,324,2,6.195,2,2,0,1,rule_sufficient,0.0,1.0
+pub-011,multi_hop,graphrag,Martina Sáblíková,PASS,6142,3752,6070,72,1,10.333,4,1,10,1,fixed_pipeline,,1.0
+pub-011,multi_hop,rag,Not found in the corpus,FAIL,3815,2274,3712,103,1,11.824,1,1,10,6,fixed_pipeline,,0.0
+pub-012,aggregation,agentic,6,PASS,3772,1538,3375,397,2,13.59,2,3,0,1,rule_sufficient,0.0,1.0
+pub-012,aggregation,graphrag,4,FAIL,4682,3361,4500,182,1,8.898,4,1,10,1,fixed_pipeline,,1.0
+pub-012,aggregation,rag,2,FAIL,2925,2315,2858,67,1,8.152,1,1,10,2,fixed_pipeline,,0.5
+pub-013,temporal,agentic,Allison Schmitt,PASS,1827,133,1530,297,2,6.082,2,2,0,2,rule_sufficient,0.0,0.5
+pub-013,temporal,graphrag,Allison Schmitt,PASS,5375,3556,5315,60,1,9.51,4,1,10,1,fixed_pipeline,,1.0
+pub-013,temporal,rag,Allison Schmitt,PASS,3096,1909,3036,60,1,6.884,1,1,10,1,fixed_pipeline,,1.0
+pub-014,multi_hop,agentic,Carolina Marín,PASS,2098,310,1770,328,2,5.573,2,2,0,1,rule_sufficient,0.0,1.0
+pub-014,multi_hop,graphrag,Not found in the corpus,FAIL,5771,3967,5669,102,1,10.224,4,1,10,11,fixed_pipeline,,1.0
+pub-014,multi_hop,rag,Carolina Marín,PASS,3280,2296,3219,61,1,10.831,1,1,10,1,fixed_pipeline,,1.0
+pub-015,multi_hop,agentic,Dani KingLaura TrottJoanna Rowsell,PASS,2092,338,1771,321,2,13.391,2,2,0,1,rule_sufficient,0.0,1.0
+pub-015,multi_hop,graphrag,Dani KingLaura TrottJoanna Rowsell,PASS,4191,2953,4103,88,1,11.251,4,1,10,1,fixed_pipeline,,1.0
+pub-015,multi_hop,rag,Not found in the corpus,FAIL,2947,2045,2868,79,1,11.073,1,1,10,3,fixed_pipeline,,0.0
+pub-016,temporal,agentic,Arnd Peiffer,PASS,1812,126,1509,303,2,4.169,2,2,0,2,rule_sufficient,0.0,0.5
+pub-016,temporal,graphrag,Arnd Peiffer,PASS,5361,2942,5292,69,1,8.585,4,1,10,1,fixed_pipeline,,0.5
+pub-016,temporal,rag,Arnd Peiffer,PASS,4900,2121,4839,61,1,18.814,1,1,10,1,fixed_pipeline,,1.0
+pub-017,multi_hop,agentic,Yi Siling,PASS,2068,315,1740,328,2,7.862,2,2,0,1,rule_sufficient,0.0,1.0
+pub-017,multi_hop,graphrag,"Yi Siling, Kim Jang-Mi",FAIL,4374,3103,4286,88,1,8.486,4,1,10,1,fixed_pipeline,,1.0
+pub-017,multi_hop,rag,Not found in the corpus,FAIL,3314,2327,3186,128,1,4.871,1,1,10,10,fixed_pipeline,,0.0
+pub-018,temporal,agentic,Kevin Jackson,PASS,1811,128,1513,298,2,6.801,2,2,0,2,rule_sufficient,0.0,0.5
+pub-018,temporal,graphrag,Not found in the corpus,FAIL,5054,3388,4973,81,1,12.965,4,1,10,2,fixed_pipeline,,1.0
+pub-018,temporal,rag,Kevin Jackson,PASS,3598,2196,3537,61,1,8.562,1,1,10,1,fixed_pipeline,,1.0
+pub-019,aggregation,agentic,3,PASS,3068,1011,2683,385,2,9.193,2,3,0,1,rule_sufficient,0.0,1.0
+pub-019,aggregation,graphrag,0,FAIL,5483,3957,5414,69,1,11.554,4,1,10,2,fixed_pipeline,,0.5
+pub-019,aggregation,rag,0,FAIL,3240,2433,3153,87,1,7.953,1,1,10,4,fixed_pipeline,,0.5
+pub-020,aggregation,agentic,4,PASS,3033,984,2644,389,2,10.52,2,3,0,1,rule_sufficient,0.0,1.0
+pub-020,aggregation,graphrag,3,FAIL,4084,2882,3999,85,1,5.625,4,1,10,1,fixed_pipeline,,1.0
+pub-020,aggregation,rag,2,FAIL,3084,2219,3029,55,1,9.177,1,1,10,2,fixed_pipeline,,0.2
+pub-021,superlative,agentic,Alpine skiing at the 1988 Winter Olympics – Men's giant slalom,PASS,2883,848,2496,387,2,18.096,2,3,0,1,rule_sufficient,0.0,1.0
+pub-021,superlative,graphrag,Alpine skiing at the 1988 Winter Olympics – Men's slalom,FAIL,6238,4126,6130,108,1,10.934,4,1,10,1,fixed_pipeline,,0.5
+pub-021,superlative,rag,Men's Super G,FAIL,4029,2624,3956,73,1,8.483,1,1,10,1,fixed_pipeline,,0.4
+pub-022,multi_hop,agentic,Ayumi Tanimoto,PASS,4257,505,3756,501,3,24.105,3,3,0,2,rule_sufficient,0.0,1.0
+pub-022,multi_hop,graphrag,Not found in the corpus,FAIL,5433,3923,5353,80,1,17.494,4,1,10,2,fixed_pipeline,,0.0
+pub-022,multi_hop,rag,Not found in the corpus,FAIL,3222,2457,3133,89,1,6.722,1,1,10,10,fixed_pipeline,,0.0
+pub-023,multi_hop,agentic,Hwang Young-Cho,PASS,4250,466,3797,453,3,16.192,3,3,0,2,rule_sufficient,0.0,1.0
+pub-023,multi_hop,graphrag,Hwang Young-Cho,PASS,5509,3687,5438,71,1,5.924,4,1,10,1,fixed_pipeline,,1.0
+pub-023,multi_hop,rag,Hwang Young-Cho,PASS,3363,2303,3302,61,1,8.739,1,1,10,1,fixed_pipeline,,1.0
+pub-024,aggregation,agentic,3,PASS,2845,834,2479,366,2,12.849,2,3,0,1,rule_sufficient,0.0,1.0
+pub-024,aggregation,graphrag,2,FAIL,3860,2549,3791,69,1,8.355,4,1,10,1,fixed_pipeline,,1.0
+pub-024,aggregation,rag,2,FAIL,3205,2110,3139,66,1,7.553,1,1,10,2,fixed_pipeline,,1.0
+pub-025,lookup,agentic,23,PASS,4671,522,4166,505,3,15.085,3,4,0,1,rule_sufficient,0.0,1.0
+pub-025,lookup,graphrag,23,PASS,4226,2905,4169,57,1,9.354,4,1,10,2,fixed_pipeline,,1.0
+pub-025,lookup,rag,23,PASS,2512,1672,2457,55,1,10.421,1,1,10,1,fixed_pipeline,,1.0
+pub-026,temporal,agentic,Jaroslav Kulhavý,PASS,1810,120,1500,310,2,4.965,2,2,0,2,rule_sufficient,0.0,0.5
+pub-026,temporal,graphrag,Jaroslav Kulhavý,PASS,5173,3056,5108,65,1,11.833,4,1,10,1,fixed_pipeline,,1.0
+pub-026,temporal,rag,Jaroslav Kulhavý,PASS,3296,1886,3231,65,1,7.132,1,1,10,1,fixed_pipeline,,1.0
+pub-027,aggregation,agentic,4,PASS,3123,1041,2728,395,2,6.717,2,3,0,1,rule_sufficient,0.0,1.0
+pub-027,aggregation,graphrag,3,FAIL,3525,2617,3461,64,1,8.293,4,1,10,1,fixed_pipeline,,1.0
+pub-027,aggregation,rag,2,FAIL,2311,1696,2209,102,1,9.482,1,1,10,2,fixed_pipeline,,0.4
+pub-028,multi_hop,agentic,Michael Phelps,PASS,2071,326,1756,315,2,16.824,2,2,0,1,rule_sufficient,0.0,1.0
+pub-028,multi_hop,graphrag,"Michael Phelps, Ian Thorpe",FAIL,4383,2781,4298,85,1,9.134,4,1,10,2,fixed_pipeline,,1.0
+pub-028,multi_hop,rag,Ian Thorpe,FAIL,2980,1957,2921,59,1,8.444,1,1,10,1,fixed_pipeline,,0.0
+pub-029,lookup,agentic,28,PASS,4369,445,3825,544,3,22.583,3,4,0,1,rule_sufficient,0.0,1.0
+pub-029,lookup,graphrag,28,PASS,4118,2535,4058,60,1,10.461,4,1,10,2,fixed_pipeline,,1.0
+pub-029,lookup,rag,28,PASS,3199,1872,3145,54,1,3.488,1,1,10,1,fixed_pipeline,,1.0
+pub-030,multi_hop,agentic,Emese Szász,PASS,2059,316,1750,309,2,11.771,2,2,0,1,rule_sufficient,0.0,1.0
+pub-030,multi_hop,graphrag,Emese Szász,PASS,4936,3536,4860,76,1,10.531,4,1,10,1,fixed_pipeline,,1.0
+pub-030,multi_hop,rag,Emese Szász,PASS,3342,2460,3278,64,1,9.631,1,1,10,1,fixed_pipeline,,1.0
+pub-031,multi_hop,agentic,Dmitry Berestov,PASS,2076,327,1756,320,2,8.43,2,2,0,1,rule_sufficient,0.0,1.0
+pub-031,multi_hop,graphrag,Dmitry Berestov,PASS,4617,3363,4540,77,1,15.039,4,1,10,2,fixed_pipeline,,1.0
+pub-031,multi_hop,rag,Dmitry Berestov,PASS,3515,2534,3439,76,1,6.814,1,1,10,1,fixed_pipeline,,1.0
+pub-032,lookup,agentic,34,PASS,4314,403,3687,627,3,11.276,3,4,0,1,rule_sufficient,0.0,1.0
+pub-032,lookup,graphrag,34,PASS,5060,3605,5009,51,1,10.678,4,1,10,1,fixed_pipeline,,1.0
+pub-032,lookup,rag,34,PASS,2810,2080,2756,54,1,9.838,1,1,10,1,fixed_pipeline,,1.0
+pub-033,aggregation,agentic,4,PASS,3404,1144,3028,376,2,11.117,2,3,0,1,rule_sufficient,0.0,1.0
+pub-033,aggregation,graphrag,4,PASS,4269,2654,4175,94,1,9.372,4,1,10,1,fixed_pipeline,,1.0
+pub-033,aggregation,rag,3,FAIL,2531,1370,2458,73,1,8.35,1,1,10,3,fixed_pipeline,,0.714
+pub-034,lookup,agentic,23,PASS,4736,578,4246,490,3,11.101,3,4,0,1,rule_sufficient,0.0,1.0
+pub-034,lookup,graphrag,23,PASS,3278,2558,3218,60,1,11.148,4,1,10,4,fixed_pipeline,,1.0
+pub-034,lookup,rag,23,PASS,2740,2145,2680,60,1,11.759,1,1,10,3,fixed_pipeline,,1.0
+pub-035,lookup,agentic,30,PASS,2190,364,1796,394,2,6.236,2,2,0,1,rule_sufficient,0.0,1.0
+pub-035,lookup,graphrag,30,PASS,4444,2373,4387,57,1,10.329,4,1,10,2,fixed_pipeline,,1.0
+pub-035,lookup,rag,30,PASS,2842,1251,2785,57,1,9.257,1,1,10,1,fixed_pipeline,,1.0
+pub-036,temporal,agentic,Zou Shiming,PASS,1816,127,1513,303,2,12.016,2,2,0,2,rule_sufficient,0.0,0.5
+pub-036,temporal,graphrag,Zou Shiming,PASS,3928,2729,3866,62,1,9.614,4,1,10,1,fixed_pipeline,,1.0
+pub-036,temporal,rag,Zou Shiming,PASS,2827,1943,2765,62,1,8.781,1,1,10,1,fixed_pipeline,,1.0
+pub-037,superlative,agentic,Shooting at the 2008 Summer Olympics – Men's 50 metre rifle prone,PASS,4884,1094,4311,573,3,8.316,3,5,0,1,rule_sufficient,0.0,1.0
+pub-037,superlative,graphrag,Shooting at the 2008 Summer Olympics – Men's 50 metre rifle prone,PASS,4413,3209,4339,74,1,12.583,4,1,10,1,fixed_pipeline,,1.0
+pub-037,superlative,rag,Men's 10 metre air pistol,FAIL,3262,2352,3105,157,1,7.942,1,1,10,7,fixed_pipeline,,0.5
+pub-038,multi_hop,agentic,Pyrros Dimas,PASS,2069,334,1742,327,2,11.519,2,2,0,1,rule_sufficient,0.0,1.0
+pub-038,multi_hop,graphrag,Not found in the corpus,FAIL,4867,3350,4748,119,1,10.96,4,1,10,11,fixed_pipeline,,0.0
+pub-038,multi_hop,rag,Not found in the corpus,FAIL,2512,1608,2447,65,1,9.077,1,1,10,3,fixed_pipeline,,0.0
+pub-039,temporal,agentic,Sandra Perković,PASS,1792,119,1494,298,2,4.191,2,2,0,2,rule_sufficient,0.0,0.5
+pub-039,temporal,graphrag,Sandra Perković,PASS,5857,3558,5786,71,1,10.841,4,1,10,1,fixed_pipeline,,1.0
+pub-039,temporal,rag,Sandra Perković,PASS,3559,2085,3501,58,1,8.971,1,1,10,1,fixed_pipeline,,1.0
+pub-040,temporal,agentic,Jason Lamy Chappuis,PASS,1795,126,1505,290,2,3.908,2,2,0,2,rule_sufficient,0.0,0.5
+pub-040,temporal,graphrag,Jason Lamy-Chappuis,PASS,4503,2335,4427,76,1,8.671,4,1,10,1,fixed_pipeline,,0.5
+pub-040,temporal,rag,Not found in the corpus,FAIL,4914,1905,4848,66,1,8.566,1,1,10,1,fixed_pipeline,,0.5
+pub-041,multi_hop,agentic,Nino Schurter,PASS,4111,441,3656,455,3,8.751,3,3,0,2,rule_sufficient,0.0,1.0
+pub-041,multi_hop,graphrag,Nino Schurter,PASS,3857,2536,3777,80,1,10.528,4,1,10,2,fixed_pipeline,,1.0
+pub-041,multi_hop,rag,Nino Schurter,PASS,3319,2327,3247,72,1,8.364,1,1,10,1,fixed_pipeline,,1.0
+pub-042,lookup,agentic,47,PASS,4657,490,4027,630,3,9.871,3,4,0,1,rule_sufficient,0.0,1.0
+pub-042,lookup,graphrag,47,PASS,7042,3770,6990,52,1,9.895,4,1,10,1,fixed_pipeline,,1.0
+pub-042,lookup,rag,47,PASS,4941,2031,4893,48,1,7.233,1,1,10,1,fixed_pipeline,,1.0
+pub-043,multi_hop,agentic,Kjetil André Aamodt,PASS,2058,290,1731,327,2,5.651,2,2,0,1,rule_sufficient,0.0,1.0
+pub-043,multi_hop,graphrag,Kjetil André Aamodt,PASS,6692,4052,6625,67,1,10.329,4,1,10,1,fixed_pipeline,,1.0
+pub-043,multi_hop,rag,Kjetil André Aamodt,PASS,4491,2632,4421,70,1,8.645,1,1,10,1,fixed_pipeline,,1.0
+pub-044,superlative,agentic,Fencing at the 2008 Summer Olympics – Men's épée,PASS,3021,984,2635,386,2,10.606,2,3,0,2,rule_sufficient,0.0,1.0
+pub-044,superlative,graphrag,Fencing at the 2008 Summer Olympics – Women's foil,FAIL,3763,2795,3694,69,1,9.411,4,1,10,1,fixed_pipeline,,1.0
+pub-044,superlative,rag,Fencing at the 2008 Summer Olympics – Men's épée,PASS,2392,1654,2255,137,1,9.5,1,1,10,5,fixed_pipeline,,0.6
+pub-045,aggregation,agentic,20,PASS,6521,2169,5906,615,3,8.721,3,5,0,1,rule_sufficient,0.0,1.0
+pub-045,aggregation,graphrag,9,FAIL,5502,3883,5266,236,1,11.454,4,1,10,3,fixed_pipeline,,0.93
+pub-045,aggregation,rag,2,FAIL,2962,2232,2888,74,1,8.411,1,1,10,2,fixed_pipeline,,0.186
+pub-046,lookup,agentic,50,PASS,4382,432,3763,619,3,8.273,3,4,0,1,rule_sufficient,0.0,1.0
+pub-046,lookup,graphrag,50,PASS,5399,2929,5340,59,1,9.694,4,1,10,2,fixed_pipeline,,1.0
+pub-046,lookup,rag,50,PASS,3787,2188,3732,55,1,8.256,1,1,10,1,fixed_pipeline,,1.0
+pub-047,lookup,agentic,24,PASS,4431,429,3785,646,3,12.792,3,4,0,1,rule_sufficient,0.0,1.0
+pub-047,lookup,graphrag,24,PASS,5463,3604,5405,58,1,10.471,4,1,10,1,fixed_pipeline,,1.0
+pub-047,lookup,rag,24,PASS,3161,2077,3103,58,1,9.223,1,1,10,1,fixed_pipeline,,1.0
+pub-048,temporal,agentic,Servet Tazegül,PASS,1832,124,1512,320,2,46.629,2,2,0,2,rule_sufficient,0.0,0.5
+pub-048,temporal,graphrag,Servet Tazegül,PASS,3610,2634,3528,82,1,12.644,4,1,10,1,fixed_pipeline,,0.5
+pub-048,temporal,rag,Servet Tazegül,PASS,2900,2155,2833,67,1,8.052,1,1,10,1,fixed_pipeline,,1.0
+pub-049,temporal,agentic,Martin Fourcade,PASS,2066,244,1675,391,2,6.824,3,2,0,2,rule_sufficient,0.0,0.5
+pub-049,temporal,graphrag,Martin Fourcade,PASS,5006,2883,4935,71,1,6.493,4,1,10,1,fixed_pipeline,,1.0
+pub-049,temporal,rag,Martin Fourcade,PASS,5029,2193,4971,58,1,7.764,1,1,10,1,fixed_pipeline,,1.0
+pub-050,multi_hop,agentic,Lee Sang-hwa,PASS,2066,330,1741,325,2,6.917,2,2,0,1,rule_sufficient,0.0,1.0
+pub-050,multi_hop,graphrag,Lee Sang-hwa,PASS,3675,2423,3597,78,1,12.728,4,1,10,1,fixed_pipeline,,1.0
+pub-050,multi_hop,rag,Lee Sang-hwa,PASS,3401,2096,3338,63,1,8.662,1,1,10,1,fixed_pipeline,,1.0
+pub-051,aggregation,agentic,6,PASS,3819,1424,3431,388,2,16.971,2,3,0,1,rule_sufficient,0.0,1.0
+pub-051,aggregation,graphrag,4,FAIL,4788,3298,4646,142,1,6.54,4,1,10,1,fixed_pipeline,,1.0
+pub-051,aggregation,rag,2,FAIL,3333,1913,3245,88,1,10.498,1,1,10,2,fixed_pipeline,,0.312
+pub-052,lookup,agentic,20,PASS,4646,509,4028,618,3,17.434,3,4,0,1,rule_sufficient,0.0,1.0
+pub-052,lookup,graphrag,20,PASS,5055,2850,5001,54,1,9.513,4,1,10,2,fixed_pipeline,,1.0
+pub-052,lookup,rag,20,PASS,4227,2203,4178,49,1,6.742,1,1,10,1,fixed_pipeline,,1.0
+pub-053,superlative,agentic,Shooting at the 2016 Summer Olympics – Women's 10 metre air rifle,PASS,5291,1203,4696,595,3,18.346,3,5,0,1,rule_sufficient,0.0,1.0
+pub-053,superlative,graphrag,Shooting at the 2016 Summer Olympics – Women's 10 metre air rifle,PASS,4381,2912,4297,84,1,10.228,4,1,10,1,fixed_pipeline,,1.0
+pub-053,superlative,rag,Women's 25 metre pistol,FAIL,3158,2174,3041,117,1,7.254,1,1,10,4,fixed_pipeline,,0.429
+pub-054,lookup,agentic,24,PASS,4695,557,4173,522,3,20.611,3,4,0,1,rule_sufficient,0.0,1.0
+pub-054,lookup,graphrag,24,PASS,5234,3693,5185,49,1,11.35,4,1,10,1,fixed_pipeline,,1.0
+pub-054,lookup,rag,24,PASS,3309,2299,3255,54,1,8.907,1,1,10,1,fixed_pipeline,,1.0
+pub-055,temporal,agentic,Sebastián Crismanich,PASS,1910,187,1597,313,2,4.117,2,2,0,2,rule_sufficient,0.0,0.5
+pub-055,temporal,graphrag,Not found in the corpus,FAIL,3534,2638,3458,76,1,9.645,4,1,10,0,fixed_pipeline,,0.5
+pub-055,temporal,rag,Sebastián Crismanich,PASS,2764,2077,2697,67,1,8.751,1,1,10,1,fixed_pipeline,,1.0
+pub-056,temporal,agentic,Yevgeny Dementyev,PASS,2104,240,1691,413,2,14.177,3,2,0,2,rule_sufficient,0.0,0.5
+pub-056,temporal,graphrag,Yevgeny Dementyev,PASS,4783,2922,4714,69,1,11.302,4,1,10,1,fixed_pipeline,,1.0
+pub-056,temporal,rag,Yevgeny Dementyev,PASS,4169,2049,4100,69,1,8.97,1,1,10,1,fixed_pipeline,,1.0
+pub-057,temporal,agentic,Allyson Felix,PASS,1812,121,1509,303,2,13.63,2,2,0,2,rule_sufficient,0.0,0.5
+pub-057,temporal,graphrag,Allyson Felix,PASS,5571,3765,5510,61,1,11.758,4,1,10,1,fixed_pipeline,,1.0
+pub-057,temporal,rag,Allyson Felix,PASS,2963,1979,2902,61,1,8.546,1,1,10,1,fixed_pipeline,,1.0
+pub-058,aggregation,agentic,5,PASS,3426,1277,3056,370,2,10.758,2,3,0,1,rule_sufficient,0.0,1.0
+pub-058,aggregation,graphrag,4,FAIL,4415,3349,4318,97,1,9.818,4,1,10,1,fixed_pipeline,,1.0
+pub-058,aggregation,rag,1,FAIL,3224,2439,3147,77,1,10.189,1,1,10,1,fixed_pipeline,,0.25
+pub-059,temporal,agentic,Laura Dahlmeier,PASS,1795,127,1508,287,2,3.846,2,2,0,2,rule_sufficient,0.0,0.5
+pub-059,temporal,graphrag,Laura Dahlmeier,PASS,5408,2942,5348,60,1,15.554,4,1,10,1,fixed_pipeline,,1.0
+pub-059,temporal,rag,Laura Dahlmeier,PASS,4509,2120,4449,60,1,7.489,1,1,10,1,fixed_pipeline,,1.0
+pub-060,multi_hop,agentic,"Mansur Isaev, Kaori Matsumoto, Yana Shemyakina",FAIL,4456,665,3991,465,3,9.347,3,3,0,2,rule_sufficient,0.0,1.0
+pub-060,multi_hop,graphrag,"Mansur Isaev, Kaori Matsumoto, Yana Shemyakina, Robeisy Ramírez",FAIL,5266,3604,5143,123,1,9.436,4,1,10,1,fixed_pipeline,,1.0
+pub-060,multi_hop,rag,Not found in the corpus,FAIL,3094,2121,3003,91,1,11.5,1,1,10,10,fixed_pipeline,,0.0
+pub-061,lookup,agentic,34,PASS,4504,497,4035,469,3,25.332,3,4,0,1,rule_sufficient,0.0,1.0
+pub-061,lookup,graphrag,34,PASS,5775,4085,5723,52,1,9.074,4,1,10,1,fixed_pipeline,,1.0
+pub-061,lookup,rag,34,PASS,3756,2667,3704,52,1,7.676,1,1,10,1,fixed_pipeline,,1.0
+pub-062,temporal,agentic,Tirunesh Dibaba,PASS,1828,119,1516,312,2,3.961,2,2,0,2,rule_sufficient,0.0,0.5
+pub-062,temporal,graphrag,Tirunesh Dibaba,PASS,5961,3786,5866,95,1,11.08,4,1,10,1,fixed_pipeline,,1.0
+pub-062,temporal,rag,Tirunesh Dibaba,PASS,3484,2115,3415,69,1,9.308,1,1,10,1,fixed_pipeline,,1.0
+pub-063,lookup,agentic,41,PASS,4469,510,3953,516,3,12.709,3,4,0,1,rule_sufficient,0.0,1.0
+pub-063,lookup,graphrag,41,PASS,5436,3975,5378,58,1,12.652,4,1,10,1,fixed_pipeline,,1.0
+pub-063,lookup,rag,41,PASS,3143,2388,3087,56,1,8.05,1,1,10,1,fixed_pipeline,,1.0
+pub-064,multi_hop,agentic,Gabriela Szabo,PASS,2076,312,1765,311,2,13.243,2,2,0,1,rule_sufficient,0.0,1.0
+pub-064,multi_hop,graphrag,"Gabriela Szabo, Haile Gebrselassie",FAIL,3593,2343,3433,160,1,11.14,4,1,10,2,fixed_pipeline,,1.0
+pub-064,multi_hop,rag,"Haile Gebrselassie, Gabriela Szabo",FAIL,3175,2136,3071,104,1,7.746,1,1,10,2,fixed_pipeline,,1.0
+pub-065,aggregation,agentic,5,PASS,3250,1132,2880,370,2,16.559,2,3,0,1,rule_sufficient,0.0,1.0
+pub-065,aggregation,graphrag,4,FAIL,4924,3074,4853,71,1,21.72,4,1,10,1,fixed_pipeline,,1.0
+pub-065,aggregation,rag,2,FAIL,4200,2095,4138,62,1,10.724,1,1,10,2,fixed_pipeline,,0.545
+pub-066,superlative,agentic,Weightlifting at the 1992 Summer Olympics – Men's 75 kg,PASS,5938,1742,5345,593,3,7.376,3,5,0,1,rule_sufficient,0.0,1.0
+pub-066,superlative,graphrag,Weightlifting at the 1992 Summer Olympics – Men's 82.5 kg,FAIL,6111,3858,6036,75,1,11.352,4,1,10,1,fixed_pipeline,,0.5
+pub-066,superlative,rag,Weightlifting at the 1992 Summer Olympics – Men's 82.5 kg,FAIL,4363,2066,4239,124,1,5.736,1,1,10,1,fixed_pipeline,,0.5
+pub-067,multi_hop,agentic,Rosannagh MacLennan,PASS,2045,320,1738,307,2,11.032,2,2,0,1,rule_sufficient,0.0,1.0
+pub-067,multi_hop,graphrag,Rosannagh MacLennan,PASS,3608,2339,3534,74,1,9.918,4,1,10,1,fixed_pipeline,,1.0
+pub-067,multi_hop,rag,Not found in the corpus,FAIL,2807,2062,2721,86,1,12.779,1,1,10,10,fixed_pipeline,,0.0
+pub-068,lookup,agentic,24,PASS,4303,395,3667,636,3,18.202,3,4,0,1,rule_sufficient,0.0,1.0
+pub-068,lookup,graphrag,24,PASS,5023,3302,4967,56,1,12.989,4,1,10,2,fixed_pipeline,,1.0
+pub-068,lookup,rag,24,PASS,3338,1968,3287,51,1,6.799,1,1,10,1,fixed_pipeline,,1.0
+pub-069,aggregation,agentic,3,PASS,3096,1037,2709,387,2,14.615,2,3,0,1,rule_sufficient,0.0,1.0
+pub-069,aggregation,graphrag,3,PASS,3619,2338,3516,103,1,11.045,4,1,10,1,fixed_pipeline,,1.0
+pub-069,aggregation,rag,2,FAIL,2640,1724,2549,91,1,7.768,1,1,10,3,fixed_pipeline,,0.4
+pub-070,aggregation,agentic,3,PASS,2966,914,2581,385,2,13.375,2,3,0,1,rule_sufficient,0.0,1.0
+pub-070,aggregation,graphrag,3,PASS,4273,2546,4187,86,1,8.293,4,1,10,1,fixed_pipeline,,1.0
+pub-070,aggregation,rag,0,FAIL,2928,1447,2834,94,1,7.045,1,1,10,3,fixed_pipeline,,0.3
+pub-071,lookup,agentic,24,PASS,4743,526,4112,631,3,15.007,3,4,0,1,rule_sufficient,0.0,1.0
+pub-071,lookup,graphrag,24,PASS,4995,3157,4942,53,1,9.201,4,1,10,2,fixed_pipeline,,1.0
+pub-071,lookup,rag,24,PASS,4258,2145,4205,53,1,7.252,1,1,10,1,fixed_pipeline,,1.0
+pub-072,temporal,agentic,Lee Sang-hwa,PASS,1900,179,1589,311,2,7.125,2,2,0,2,rule_sufficient,0.0,0.5
+pub-072,temporal,graphrag,Lee Sang-hwa,PASS,4185,2258,4096,89,1,12.67,4,1,10,1,fixed_pipeline,,0.5
+pub-072,temporal,rag,Not found in the corpus,FAIL,3599,1825,3521,78,1,5.153,1,1,10,1,fixed_pipeline,,0.5
+pub-073,multi_hop,agentic,Yang Ling,PASS,2123,384,1813,310,2,11.479,2,2,0,1,rule_sufficient,0.0,1.0
+pub-073,multi_hop,graphrag,Yang Ling,PASS,5008,3504,4930,78,1,10.064,4,1,10,2,fixed_pipeline,,1.0
+pub-073,multi_hop,rag,Yang Ling,PASS,3103,2133,3025,78,1,8.747,1,1,10,1,fixed_pipeline,,1.0
+pub-074,lookup,agentic,17,PASS,2217,377,1831,386,2,11.393,2,2,0,1,rule_sufficient,0.0,1.0
+pub-074,lookup,graphrag,17,PASS,5838,2997,5777,61,1,9.778,4,1,10,2,fixed_pipeline,,1.0
+pub-074,lookup,rag,17,PASS,4437,2064,4380,57,1,8.261,1,1,10,1,fixed_pipeline,,1.0
+pub-075,lookup,agentic,32,PASS,4722,546,4089,633,3,14.732,3,4,0,1,rule_sufficient,0.0,1.0
+pub-075,lookup,graphrag,32,PASS,5564,3520,5501,63,1,11.146,4,1,10,2,fixed_pipeline,,1.0
+pub-075,lookup,rag,32,PASS,3421,1911,3361,60,1,9.224,1,1,10,1,fixed_pipeline,,1.0
+pub-076,multi_hop,agentic,Julia Mancuso,PASS,4127,435,3664,463,3,11.557,3,3,0,2,rule_sufficient,0.0,1.0
+pub-076,multi_hop,graphrag,Julia Mancuso,PASS,4069,2796,3997,72,1,10.327,4,1,10,1,fixed_pipeline,,1.0
+pub-076,multi_hop,rag,Not found in the corpus,FAIL,3253,2266,3168,85,1,9.146,1,1,10,10,fixed_pipeline,,0.0
+pub-077,multi_hop,agentic,Kaillie Humphries,PASS,4235,455,3749,486,3,15.123,3,3,0,2,rule_sufficient,0.0,1.0
+pub-077,multi_hop,graphrag,Kaillie Humphries,PASS,5712,3907,5635,77,1,10.383,4,1,10,1,fixed_pipeline,,1.0
+pub-077,multi_hop,rag,Kaillie Humphries,PASS,4121,2263,4053,68,1,7.216,1,1,10,1,fixed_pipeline,,1.0
+pub-078,aggregation,agentic,7,PASS,3740,1447,3390,350,2,5.44,2,3,0,1,rule_sufficient,0.0,1.0
+pub-078,aggregation,graphrag,5,FAIL,4616,2983,4382,234,1,11.026,4,1,10,2,fixed_pipeline,,1.0
+pub-078,aggregation,rag,3,FAIL,3043,1994,2952,91,1,7.507,1,1,10,3,fixed_pipeline,,0.438
+pub-079,multi_hop,agentic,Leontien Zijlaard,PASS,4127,454,3668,459,3,11.926,3,3,0,2,rule_sufficient,0.0,1.0
+pub-079,multi_hop,graphrag,Not found in the corpus,FAIL,5269,3464,5176,93,1,9.681,4,1,10,11,fixed_pipeline,,1.0
+pub-079,multi_hop,rag,Not found in the corpus,FAIL,2655,1750,2609,46,1,9.34,1,1,10,0,fixed_pipeline,,0.0
+pub-080,lookup,agentic,17,PASS,4730,581,4252,478,3,10.641,3,4,0,1,rule_sufficient,0.0,1.0
+pub-080,lookup,graphrag,17,PASS,3683,2347,3630,53,1,9.919,4,1,10,2,fixed_pipeline,,1.0
+pub-080,lookup,rag,17,PASS,2805,2168,2756,49,1,9.219,1,1,10,1,fixed_pipeline,,1.0
+pub-081,multi_hop,agentic,Guo Wenjun,PASS,2082,345,1771,311,2,5.654,2,2,0,1,rule_sufficient,0.0,1.0
+pub-081,multi_hop,graphrag,Guo Wenjun,PASS,5309,3639,5242,67,1,12.876,4,1,10,1,fixed_pipeline,,1.0
+pub-081,multi_hop,rag,"Guo Wenjun, David Kostelecký",FAIL,3282,2332,3168,114,1,9.804,1,1,10,2,fixed_pipeline,,1.0
+pub-082,aggregation,agentic,12,PASS,4581,2130,4180,401,2,5.473,2,3,0,1,rule_sufficient,0.0,1.0
+pub-082,aggregation,graphrag,8,FAIL,5761,3989,5572,189,1,12.112,4,1,10,1,fixed_pipeline,,1.0
+pub-082,aggregation,rag,3,FAIL,3534,2452,3428,106,1,9.758,1,1,10,4,fixed_pipeline,,0.308
+pub-083,multi_hop,agentic,Pernilla Wiberg,PASS,2172,356,1823,349,2,22.001,2,2,0,1,rule_sufficient,0.0,1.0
+pub-083,multi_hop,graphrag,Lasse Kjus,FAIL,6534,4253,6473,61,1,9.776,4,1,10,1,fixed_pipeline,,1.0
+pub-083,multi_hop,rag,Not found in the corpus,FAIL,4471,2869,4377,94,1,7.869,1,1,10,10,fixed_pipeline,,0.0
+pub-084,superlative,agentic,Fencing at the 1992 Summer Olympics – Men's épée,PASS,2980,943,2592,388,2,10.103,2,3,0,2,rule_sufficient,0.0,1.0
+pub-084,superlative,graphrag,Not found in the corpus,FAIL,5461,3743,5370,91,1,9.231,4,1,10,7,fixed_pipeline,,0.5
+pub-084,superlative,rag,Fencing at the 1992 Summer Olympics – Men's épée,PASS,3031,2267,2963,68,1,13.414,1,1,10,1,fixed_pipeline,,0.5
+pub-085,superlative,agentic,Sailing at the 2008 Summer Olympics – Men's 470,PASS,3233,1073,2841,392,2,18.129,2,3,0,1,rule_sufficient,0.0,1.0
+pub-085,superlative,graphrag,Sailing at the 2008 Summer Olympics – Men's 470,PASS,4465,2912,4382,83,1,9.011,4,1,10,2,fixed_pipeline,,1.0
+pub-085,superlative,rag,Sailing at the 2008 Summer Olympics – Men's 470,PASS,2901,2010,2833,68,1,7.259,1,1,10,1,fixed_pipeline,,0.727
+pub-086,multi_hop,agentic,Shani Davis,PASS,2074,319,1744,330,2,5.927,2,2,0,1,rule_sufficient,0.0,1.0
+pub-086,multi_hop,graphrag,Shani Davis,PASS,6025,3770,5963,62,1,10.937,4,1,10,1,fixed_pipeline,,1.0
+pub-086,multi_hop,rag,Shani Davis,PASS,3743,2378,3677,66,1,8.894,1,1,10,1,fixed_pipeline,,1.0
+pub-087,aggregation,agentic,17,PASS,4774,2125,4390,384,2,10.04,2,3,0,1,rule_sufficient,0.0,1.0
+pub-087,aggregation,graphrag,3,FAIL,5620,3826,5513,107,1,12.501,4,1,10,3,fixed_pipeline,,0.158
+pub-087,aggregation,rag,3,FAIL,3684,2372,3559,125,1,7.615,1,1,10,4,fixed_pipeline,,0.263
+pub-088,superlative,agentic,Alpine skiing at the 1992 Winter Olympics – Men's giant slalom,PASS,2891,859,2511,380,2,8.564,2,3,0,2,rule_sufficient,0.0,1.0
+pub-088,superlative,graphrag,Alpine skiing at the 1992 Winter Olympics – Men's combined,FAIL,5529,3460,5431,98,1,8.798,4,1,10,1,fixed_pipeline,,0.6
+pub-088,superlative,rag,Alpine skiing at the 1992 Winter Olympics – Men's combined,FAIL,3718,2012,3626,92,1,10.974,1,1,10,2,fixed_pipeline,,0.4
+pub-089,aggregation,agentic,5,PASS,3234,1139,2854,380,2,5.858,2,3,0,1,rule_sufficient,0.0,1.0
+pub-089,aggregation,graphrag,3,FAIL,5246,3574,5179,67,1,10.825,4,1,10,1,fixed_pipeline,,0.917
+pub-089,aggregation,rag,0,FAIL,3134,2112,3047,87,1,7.855,1,1,10,4,fixed_pipeline,,0.417
+pub-090,temporal,agentic,Aslanbek Khushtov,PASS,2102,245,1688,414,2,4.794,3,2,0,2,rule_sufficient,0.0,0.5
+pub-090,temporal,graphrag,Aslanbek Khushtov,PASS,4851,3364,4779,72,1,10.939,4,1,10,1,fixed_pipeline,,1.0
+pub-090,temporal,rag,Aslanbek Khushtov,PASS,2983,2070,2911,72,1,7.563,1,1,10,1,fixed_pipeline,,1.0
+pub-091,lookup,agentic,18,PASS,2354,494,1955,399,2,9.54,2,2,0,1,rule_sufficient,0.0,1.0
+pub-091,lookup,graphrag,18,PASS,5625,3774,5569,56,1,10.52,4,1,10,1,fixed_pipeline,,1.0
+pub-091,lookup,rag,18,PASS,3207,2334,3151,56,1,9.789,1,1,10,1,fixed_pipeline,,1.0
+pub-092,aggregation,agentic,6,PASS,3248,1109,2871,377,2,14.693,2,3,0,1,rule_sufficient,0.0,1.0
+pub-092,aggregation,graphrag,0,FAIL,5872,3979,5773,99,1,9.46,4,1,10,3,fixed_pipeline,,0.308
+pub-092,aggregation,rag,1,FAIL,3534,2252,3422,112,1,8.974,1,1,10,1,fixed_pipeline,,0.462
+pub-093,aggregation,agentic,4,PASS,2950,896,2567,383,2,16.817,2,3,0,1,rule_sufficient,0.0,1.0
+pub-093,aggregation,graphrag,4,PASS,4159,2776,4079,80,1,17.469,4,1,10,1,fixed_pipeline,,1.0
+pub-093,aggregation,rag,2,FAIL,4120,2253,3970,150,1,12.277,1,1,10,3,fixed_pipeline,,0.778
+pub-094,temporal,agentic,Oleg Kucherenko,PASS,1807,129,1521,286,2,16.118,2,2,0,2,rule_sufficient,0.0,0.5
+pub-094,temporal,graphrag,Not found in the corpus,FAIL,4977,3438,4887,90,1,10.431,4,1,10,3,fixed_pipeline,,0.5
+pub-094,temporal,rag,Not found in the corpus,FAIL,3411,2016,3300,111,1,5.205,1,1,10,10,fixed_pipeline,,0.5
+pub-095,multi_hop,agentic,Valerie Vili,PASS,2042,322,1733,309,2,13.715,2,2,0,1,rule_sufficient,0.0,1.0
+pub-095,multi_hop,graphrag,Valeriy Borchin,FAIL,5668,3897,5607,61,1,15.451,4,1,10,1,fixed_pipeline,,0.0
+pub-095,multi_hop,rag,Valeriy Borchin,FAIL,3481,2296,3415,66,1,7.85,1,1,10,1,fixed_pipeline,,0.0
+pub-096,multi_hop,agentic,Fazliddin Gaibnazarov,PASS,2110,320,1774,336,2,14.248,2,2,0,1,rule_sufficient,0.0,1.0
+pub-096,multi_hop,graphrag,Tony Yoka,FAIL,5791,4159,5729,62,1,10.325,4,1,10,1,fixed_pipeline,,0.0
+pub-096,multi_hop,rag,Tony Yoka,FAIL,3727,2726,3665,62,1,7.436,1,1,10,1,fixed_pipeline,,0.0
+pub-097,temporal,agentic,Yana Shemyakina,PASS,1808,117,1501,307,2,6.698,2,2,0,2,rule_sufficient,0.0,0.5
+pub-097,temporal,graphrag,Yana Shemyakina,PASS,4189,2646,4121,68,1,10.737,4,1,10,1,fixed_pipeline,,1.0
+pub-097,temporal,rag,Yana Shemyakina,PASS,2998,1837,2933,65,1,9.674,1,1,10,1,fixed_pipeline,,1.0
+pub-098,multi_hop,agentic,Bekzat Sattarkhanov,PASS,2093,344,1757,336,2,7.504,2,2,0,1,rule_sufficient,0.0,1.0
+pub-098,multi_hop,graphrag,Aleksandr Lebziak,FAIL,4992,3529,4927,65,1,14.233,4,1,10,1,fixed_pipeline,,0.0
+pub-098,multi_hop,rag,Aleksandr Lebziak,FAIL,2471,1550,2406,65,1,7.771,1,1,10,1,fixed_pipeline,,0.0
+pub-099,multi_hop,agentic,"Erik LesserDaniel BöhmArnd PeifferSimon Schempp, Marit Bjørgen",FAIL,2200,408,1869,331,2,7.73,2,2,0,1,rule_sufficient,0.0,1.0
+pub-099,multi_hop,graphrag,Erik LesserDaniel BöhmArnd PeifferSimon Schempp,PASS,4176,2905,4081,95,1,11.152,4,1,10,1,fixed_pipeline,,1.0
+pub-099,multi_hop,rag,Not found in the corpus,FAIL,3563,2330,3473,90,1,8.355,1,1,10,10,fixed_pipeline,,0.0
+pub-100,temporal,agentic,Missy Franklin,PASS,1836,134,1532,304,2,11.501,2,2,0,2,rule_sufficient,0.0,0.5
+pub-100,temporal,graphrag,Missy Franklin,PASS,5536,3563,5475,61,1,14.529,4,1,10,1,fixed_pipeline,,1.0
+pub-100,temporal,rag,Missy Franklin,PASS,3055,1797,2993,62,1,8.048,1,1,10,1,fixed_pipeline,,1.0
